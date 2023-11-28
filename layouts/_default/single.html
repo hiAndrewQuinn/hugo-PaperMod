@@ -7,6 +7,11 @@
       {{ .Title }}
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h1>
+    {{- if .Params.subtitle }}
+    <div class="post-subtitle">
+      {{ .Params.subtitle }}
+    </div>
+    {{- end }}
     {{- if .Description }}
     <div class="post-description">
       {{ .Description }}
