@@ -12,6 +12,7 @@
       {{ .Params.subtitle }}
     </div>
     {{- end }}
+    
     {{- if .Description }}
     <div class="post-description">
       {{ .Description }}
@@ -31,6 +32,13 @@
   {{- if (.Param "ShowToc") }}
   {{- partial "toc.html" . }}
   {{- end }}
+
+  <blockquote>
+    <em>
+      <a href="https://www.linkedin.com/in/heiandrewquinn/" style="text-decoration: underline;">Add me on LinkedIn</a>!
+      You can cite this post as a reason if you're shy.
+    </em>
+  </blockquote>
 
   {{- if .Content }}
   <div class="post-content">
