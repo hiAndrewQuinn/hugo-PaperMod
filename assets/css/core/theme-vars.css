@@ -1,118 +1,61 @@
 :root {
-
-  /* Base Color Palette (from your first CSS file) */
-
-  --copper: #a8763e; /* Note: Removed 'ff' as it's for opacity and not typically used in hex color definitions unless it's RGBA format */
-
+  /* Base Color Palette */
+  --copper: #a8763e;
   --cosmic-latte: #f7f3e3;
-
   --antiflash-white: #ecf0f1;
-
   --specsavers-green: #ADC178;
-
   --barn-red: #6f1a07;
-
+  --barn-red-brighter: #f9b1a0; /* Or #D93025, or #E74C3C */
   --bistre: #2b2118;
-
   --bistre-darker: #271e16; /* Approx. 10% darker than --bistre */
 
-  /* Non-color variables from your second file (retained) */
-
+  /* Non-color variables */
   --gap: 24px;
-
   --content-gap: 20px;
-
   --nav-width: 1024px;
-
   --main-width: 720px;
-
   --header-height: 60px;
-
   --footer-height: 60px;
-
   --radius: 8px;
 
-
-  /* Light Theme Colors - Using base palette variables */
-
-  --theme: var(--cosmic-latte);
-
-  --entry: var(--antiflash-white); /* Used for a distinct entry/card background */
-
-  --primary: var(--bistre);        /* Main text color */
-
-  --secondary: var(--bistre);      /* Accent color, links */
-
-  --tertiary: var(--specsavers-green);             /* Derived: A muted, darker --cosmic-latte for less prominent text. Kept as hex as it's not a direct original color. */
-
-  --content: var(--bistre);        /* General content text */
-
-  --hljs-bg: var(--bistre);/* Background for highlighted code */
-
-  --code-bg: var(--antiflash-white);              /* Derived: Slightly darker --cosmic-latte for general code blocks. Kept as hex. */
-
-  --border: #d8d1c0;               /* Derived: A light, subtle border, darker --cosmic-latte. Kept as hex. */
-
-
-
-  /* Additional colors from your first file, now defined above, can be used directly by their var name */
-
-  /* --specsavers-green-accent: var(--specsavers-green); */ /* Example if you had specific uses */
-
-  /* --barn-red-accent: var(--barn-red); */                 /* Example if you had specific uses */
-
+  /* Light Theme Colors */
+  --theme: var(--cosmic-latte);          /* Overall background color */
+  --entry: var(--antiflash-white);       /* Background for cards/entries */
+  --primary: var(--bistre);              /* Main text color */
+  --secondary: var(--bistre);            /* Accent color, links (can be same as primary or different) */
+  --tertiary: var(--specsavers-green);   /* Tertiary text or accent */
+  --content: var(--bistre);              /* General content text */
+  --hljs-bg: var(--bistre);              /* Background for highlighted code (e.g., in Highlight.js) */
+  --code-bg: var(--antiflash-white);     /* Background for general inline code blocks */
+  --border: #d8d1c0;                     /* A light, subtle border (e.g., derived from a darker --cosmic-latte) */
 }
-
 
 .dark {
-
-  /* Dark Theme Colors - Using base palette variables */
-
+  /* Dark Theme Colors */
   --theme: var(--bistre);
-
-  --entry: var(--bistre-darker);        /* Distinct entry/card background in dark mode */
-
-  --primary: var(--antiflash-white);  /* Main text on dark background */
-
-  --secondary: var(--antiflash-white);      /* Accent color on dark background */
-
-  --tertiary: var(--barn-red);/* Less prominent text on dark background */
-
-  --content: var(--cosmic-latte);  /* General content text on dark */
-
-  --hljs-bg: var(--bistre-darker);              /* Derived: A darker shade of --bistre for highlighted code. Kept as hex. */
-
-  --code-bg: var(--bistre-darker);/* Used for general code blocks in dark mode */
-
-  --border: var(--copper);         /* Used for borders in dark mode */
-
+  --entry: var(--bistre-darker);         /* Background for cards/entries in dark mode */
+  --primary: var(--antiflash-white);     /* Main text color on dark background */
+  --secondary: var(--antiflash-white);   /* Accent color on dark background */
+  --tertiary: var(--barn-red);           /* Less prominent text or accent on dark background */
+  --content: var(--cosmic-latte);        /* General content text on dark background */
+  --hljs-bg: var(--bistre-darker);       /* Background for highlighted code in dark mode */
+  --code-bg: var(--bistre-darker);       /* Background for general inline code blocks in dark mode */
+  --border: var(--copper);               /* Border color in dark mode */
 }
-
-
-/* Styles for links within a single post article */
-
-/* Assuming your single post container has the class "post-content" */
 
 .post-single a {
-
   color: var(--copper);
-
 }
-
 
 .post-single a:hover,
-
 .post-single a:focus {
-
-  background-color: yellow;
-
+  background-color: yellow; /* Consider using a theme variable for hover states for consistency */
 }
 
-
 code {
-  color: var(--bistre-darker);
+  color: var(--bistre-darker); /* Default code text color (Light mode) */
 }
 
 .dark code {
-  color: var(--antiflash-white);
+  color: var(--antiflash-white); /* Code text color in Dark mode */
 }
