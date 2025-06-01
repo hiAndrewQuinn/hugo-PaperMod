@@ -38,10 +38,19 @@
     margin-bottom: var(--gap);
     padding: var(--gap);
     background: var(--entry);
-    border-radius: var(--radius);
     transition: transform 0.1s;
     border: 1px solid var(--border);
 }
+
+.post-entry:hover {
+  background: yellow;
+}
+
+.dark .post-entry:hover {
+  background: black;
+}
+
+
 
 .post-entry:active {
     transform: scale(0.96);
