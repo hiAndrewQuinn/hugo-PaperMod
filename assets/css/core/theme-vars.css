@@ -116,4 +116,7 @@
 }
 
 
-
+code {
+  background-color: var(--antiflash-white);
+  color: var(--bistre);
+}
